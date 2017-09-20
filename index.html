@@ -1,3 +1,7 @@
+<!--
+In this file, you can see my abilities in HTML5, CSS3, Javascript. 
+In order to make the CSS visible, I use the internal CSS file. Usually, I would use the external file.
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,52 +11,217 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
- 
- <style>
-	html, body {
-		height: 100%;
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+	<style>
+	.jumbotron{
+		background-image: url(img/jakob-owens-208999.jpg);
+		text-align: center;		
 	}
-
-	.overlay {
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		background-image: url(img/550cf8e7def8c.jpg);
-		opacity: 0.9;
-		filter: alpha(apacity=50);
+	.myform{
+		
+		  float: none;  
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto; 
 	}
-	.choose{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-top: -50px;
-		margin-left:-139px;
-		width: 227px;
-		height: 200px;
+	
+	#email {
+              
+              width: 300px;
+              
+          }
+	 body {
+              
+              position: relative;
+              
+          }
+	i:hover{
+		background-color:white;`
 	}
 </style>
  </head>
   <body>
    
-  
+   
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">MyTutor</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div class="overlay">
-	<div class="choose">
-		<div class="center-block" style="padding-top:50%">
-			<p class="text-center text-light">Choose your level</p>
-			<div class="btn-group" role="group" aria-label="...">
-				<button class="btn btn-primary"><a class ="text-light" href="graduate.html">Graduate</a></button>
-				<button class="btn btn-secondary center-block"><a class ="text-light" href="undergraduate.html">UnderGraduate</a></button>
-			</div>
-		
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="graduate.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="reservation.html">My Reservation</a>
+      </li>
+	  
+	   <li class="nav-item">
+        <a class="nav-link" href="tutee.html">Find a Tutee</a>
+      </li>
+     
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Email">
+	  <input class="form-control mr-sm-2" type="password" placeholder="Password">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+    </form>
+  </div>
+</nav>
+
+<div class="jumbotron" id="jumbotron">
+  <h1 class="display-3">Welome to Mytutor, Graduate Student!</h1>
+  <p class="lead">This is why YOU should reserve a tutuor!</p>
+  <hr class="my-4">
+  <p>Want to Find a tutee? Join our mailing list then pick a day!</p>
+  
+  
+	<div class="container">
+		<div class="row center-block">
+			<form class="myform">
+				<div class="form-row">
+					<div class="col-3">
+					  <input type="text" class="form-control" placeholder="Username">
+					</div>
+					<div class="col-3">
+					  <input type="text" class="form-control" placeholder="Email">
+					</div>
+					<div class="col-3">
+					  <input id="select_day" class="select_day form-control" placeholder="Day"></input>
+					</div>
+					<button type="submit" class="btn btn-primary">Sign Up</button>					
+				</div>
+			</form>
+			
 		</div>
 		
 	</div>
-	
+</div>
+<script src="javascript/laydate/laydate.js"></script> <!-- 改成你的路径 -->
+<script>
+//执行一个laydate实例
+laydate.render({
+  elem: '#select_day' //指定元素
+});
+</script>
+
+
+<h1 class="text-center">Candidate Tutee</h1>
+<div class="container">
+	 <div class="row">
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="https://creativeservices.gwu.edu/sites/creativeservices.gwu.edu/files/downloads/gw_ahz_4cp_pos.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="https://creativeservices.gwu.edu/sites/creativeservices.gwu.edu/files/downloads/gw_ahz_4cp_pos.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="https://creativeservices.gwu.edu/sites/creativeservices.gwu.edu/files/downloads/gw_ahz_4cp_pos.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
 </div>
 
+<h1 class="text-center">Do you want to be a tutor?</h1>
+
+<div class="container">
+<p class="text-center">Please fill in the form</p>
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4" class="col-form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4" class="col-form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress" class="col-form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity" class="col-form-label">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState" class="col-form-label">State</label>
+      <select id="inputState" class="form-control">Choose</select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip" class="col-form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity" class="col-form-label">GPA</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState" class="col-form-label">Major</label>
+      <select id="inputState" class="form-control">Choose</select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip" class="col-form-label">Empty time</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox"> Check me out
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Be a tutor</button>
+</form>
+</div>
+
+
+
+
+
+
+<div class="container-fluid bg-dark">
+<!-- FOOTER -->
+      <footer class="text-center">
+		<h1 class="text-align text-light" >Contact</H1>
+		<div class = "row">
+			<div class="col-4"> 
+				<h3 class="text-light">Help</h3>
+				<p class="text-light">We are a team from GWU</p>
+				<p class="text-light">if you need anything, please email us</p>
+			</div>
+			<div class="col-4">
+				<h3 class="text-light">Address</h3>
+				<i class="fa fa-envelope-o" aria-hidden="true"></i><span class="text-light">Email:abc@gwu.edu<span>
+			</div>
+			<div class="col-4">
+				<h3 class="text-light">Follow</h3>
+				<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				<i class="fa fa-twitter" aria-hidden="true"></i>
+				<i class="fa fa-weixin" aria-hidden="true"></i>
+				<i class="fa fa-facebook" id="facebook" aria-hidden="true"></i>
+			</div>
+			
+		</div>
+		<p class="float-right"><a href="#">Back to top</a></p>
+		<p class="text-light">&copy; 2017 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+	  </footer>
+</div>
  
 
     <!-- Optional JavaScript -->
